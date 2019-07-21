@@ -174,7 +174,7 @@ public class DownloadsActivity extends AppCompatActivity {
         themeUtil.onResume(this);
         fetch.getDownloads(downloads -> {
             final ArrayList<Download> list = new ArrayList<>(downloads);
-            Collections.sort(list, (first, second) -> Long.compare(first.getCreated(), second.getCreated()));
+            /*Collections.sort(list, (first, second) -> Long.compare(first.getCreated(), second.getCreated()));*/
             if (list.isEmpty()) {
                 setErrorView(ErrorType.NO_DOWNLOADS);
                 switchViews(true);
