@@ -21,26 +21,26 @@
   -->
 
 <resources>
-    <string name="about_app">Aurora is an open source alternative to Play Store.
-        It lets you download apps, provides updates of installed apps and lets you search for apps &amp; games.
-        It also provides a list of trackers embedded in an app.
+    <string name="about_app">Aurora Store is an open source alternative to the Google Play Store.
+        It lets you download apps, provides updates of installed apps, and lets you search for apps &amp; games.
+        It also provides a list of detected trackers embedded in an app.
     </string>
-    <string name="about_paypal">Paypal</string>
-    <string name="about_paypal_summary">Donate me on Paypal</string>
+    <string name="about_paypal">PayPal</string>
+    <string name="about_paypal_summary">Donate to me on PayPal</string>
     <string name="about_fdroid">F-Droid</string>
     <string name="about_gitlab">GitLab</string>
-    <string name="about_gitlab_summary">Get AuroraStore source code from Aurora OSS on GitLab.</string>
+    <string name="about_gitlab_summary">Get the Aurora Store source code from Aurora OSS on GitLab.</string>
     <string name="about_telegram">Telegram</string>
-    <string name="about_telegram_summary">Join Aurora Support group for discussions or suggestions.</string>
-    <string name="about_fdroid_summary">Get Aurora on F-Droid Repo</string>
+    <string name="about_telegram_summary">Join the Aurora Support group for discussions or suggestions.</string>
+    <string name="about_fdroid_summary">Get the Aurora Store on via F-Droid</string>
     <string name="about_xda">Dev Thread</string>
-    <string name="about_xda_summary">See AuroraStore XDA thread for discussions or suggestions.</string>
+    <string name="about_xda_summary">See the Aurora Store XDA thread for discussions or suggestions.</string>
 
     <string name="account_dummy">Anonymous</string>
-    <string name="account_dummy_desc">Login using Anonymous Account ?</string>
+    <string name="account_dummy_desc">Login using an Anonymous Account ?</string>
     <string name="account_google">Google Account</string>
-    <string name="account_logout">Logout from Aurora ?</string>
-    <string name="account_prompt_login">Kindly login to continue</string>
+    <string name="account_logout">Logout from Aurora?</string>
+    <string name="account_prompt_login">Please login to continue</string>
     <string name="account_switch">Switch account</string>
 
     <string name="action_about">About</string>
@@ -74,7 +74,7 @@
     <string name="action_filter_paid_apps">Paid</string>
     <string name="action_filter_rating">Ratings</string>
     <string name="action_flag">Report App</string>
-    <string name="action_get_local_apk">Get local APK</string>
+    <string name="action_get_local_APK">Get local APK</string>
     <string name="action_home">Home</string>
     <string name="action_import">Import</string>
     <string name="action_info">App Info</string>
@@ -140,7 +140,7 @@
     <string name="details_more">Read more</string>
     <string name="details_no_ads">No ads</string>
     <string name="details_new_changes">What\'s new</string>
-    <string name="details_no_changes">Changelog not provided by developer</string>
+    <string name="details_no_changes">Changelog not provided by the developer</string>
     <string name="details_permissions">App permissions</string>
     <string name="details_purchase">Purchase</string>
     <string name="details_rate_this_app">Rate this app</string>
@@ -152,9 +152,9 @@
     <string name="details_why_rate_this_app">Tell others what you think</string>
     <string name="details_you_rated_this_app">Your rating</string>
 
-    <string name="dialog_title_logout">Log out ?</string>
+    <string name="dialog_title_logout">Log out?</string>
     <string name="dialog_title_self_update">New update available</string>
-    <string name="dialog_desc_self_update">Do you wish to update now ?</string>
+    <string name="dialog_desc_self_update">Do you wish to update now?</string>
 
     <string name="download_cancel_all">Cancel all</string>
     <string name="download_canceled">Canceled</string>
@@ -175,7 +175,7 @@
     <string name="download_resume_all">Resume all</string>
 
     <string name="early_access">Early access</string>
-    <string name="error_app_download">can not be downloaded</string>
+    <string name="error_app_download">Can't be downloaded</string>
     <string name="error_app_not_found">App not found</string>
     <string name="error_incorrect_password">Incorrect email or password</string>
     <string name="error_invalid_device_definition">Device definition rejected</string>
@@ -198,10 +198,10 @@
     <string name="installer_status_failure">Installation failed</string>
     <string name="installer_status_failure_aborted">Installation cancelled</string>
     <string name="installer_status_failure_blocked">Installation was blocked</string>
-    <string name="installer_status_failure_conflict">Conflicting package exists</string>
+    <string name="installer_status_failure_conflict">A conflicting package exists</string>
     <string name="installer_status_failure_incompatible">Incompatible app</string>
     <string name="installer_status_failure_invalid">Invalid or corrupted APK</string>
-    <string name="installer_status_failure_storage">Insufficient memory space</string>
+    <string name="installer_status_failure_storage">Insufficient storage space</string>
     <string name="installer_status_success">Successfully installed</string>
     <string name="installer_status_unknown">Unknown</string>
     <string name="installer_status_user_action">Waiting for user confirmation</string>
@@ -221,7 +221,7 @@
     <string name="list_app_user">User app</string>
     <string name="list_blacklist">Blacklisted apps</string>
     <string name="list_blacklist_none">No apps blacklisted</string>
-    <string name="list_bulk_install">app(s) queued for bulk install"</string>
+    <string name="list_bulk_install">app(s) queued for bulk installation"</string>
     <string name="list_empty_fav">No favourites</string>
     <string name="list_empty_query">No recent searches</string>
     <string name="list_empty_updates">No updates available</string>
@@ -235,8 +235,8 @@
     <string name="list_updating">Updating</string>
 
     <string name="manual_download_disclaimer">Disclaimer</string>
-    <string name="manual_download_incompatible">Google Play Store considers this app incompatible with your device. This means version code has not been returned by the Google Play Store server.</string>
-    <string name="manual_download_warning">This page lets you manually choose the version of the app to download.\n\nKeep in mind that downloading arbitrary versions of apps is not supported by Google Play Store. Your success depends on a lucky guess of the version code. Even if you guess right and you get the download to start, you might get an incompatible apk.</string>
+    <string name="manual_download_incompatible">The Google Play Store considers this app incompatible with your device. This means version code has not been returned by the Google Play Store server.</string>
+    <string name="manual_download_warning">This page lets you manually choose the version of the app to download.\n\nKeep in mind that downloading arbitrary versions of apps is not supported by the Google Play Store. Your success depends on a lucky guess of the version code. Even if you guess right and you get the download to start, you might get an incompatible APK.</string>
 
     <string name="menu_account">Accounts</string>
     <string name="menu_disclaimer">Disclaimer</string>
@@ -250,7 +250,7 @@
     <string name="notification_installation_failed">Installation failed</string>
     <string name="notification_installation_progress">Installing</string>
     <string name="notification_installation_auto">Downloaded, click to install</string>
-    <string name="notification_installation_manual">Bundled Apk, manual action required</string>
+    <string name="notification_installation_manual">Bundled APK, manual action required</string>
 
     <string name="pref_app_download">Downloads</string>
     <string name="pref_app_language">Language</string>
@@ -264,21 +264,21 @@
     <string name="pref_device_to_pretend_to_be">Pretend to be a different device</string>
     <string name="pref_device_to_pretend_to_be_default">Your original device info</string>
     <string name="pref_device_to_pretend_to_be_toast">This change will be applied after you re-login</string>
-    <string name="pref_dialog_to_apply_restart">This setting will be applied after you restart app</string>
+    <string name="pref_dialog_to_apply_restart">This setting will be applied after you restart the app</string>
     <string name="pref_downloader_active_summary">Maximum number of active downloads</string>
     <string name="pref_downloader_active_title">Active download</string>
     <string name="pref_downloader_debug_summary">Enable download debugging to get detailed logs</string>
     <string name="pref_downloader_debug_title">Download debugging</string>
-    <string name="pref_downloader_strategy_summary">Select default download strategy, recommended Parallel Strategy for fastest download</string>
+    <string name="pref_downloader_strategy_summary">Select the default download strategy, recommended is Parallel for faster/concurrent downloads</string>
     <string name="pref_downloader_strategy_title">Download strategy</string>
     <string name="pref_downloader_strategy_sequential">Sequential download</string>
     <string name="pref_downloader_strategy_parallel">Parallel download (Splits)</string>
     <string name="pref_downloader_path_title">Download path</string>
-    <string name="pref_downloader_wifi_title">Download using wifi only</string>
+    <string name="pref_downloader_wifi_title">Download using WiFi only</string>
     <string name="pref_downloader_internal">Download apps in internal storage</string>
     <string name="pref_downloader_internal_desc">If enabled, you will not able to install apps via Aurora Services</string>
-    <string name="pref_filter_fdroid_summary">Removes F-droid apps from app lists</string>
-    <string name="pref_filter_fdroid_title">Filter F-droid apps</string>
+    <string name="pref_filter_fdroid_summary">Removes F-Droid apps from app lists</string>
+    <string name="pref_filter_fdroid_title">Filter F-Droid apps</string>
     <string name="pref_filter_google_summary">Removes all Google Apps from search results and category apps</string>
     <string name="pref_filter_google_title">Filter Google apps</string>
     <string name="pref_filter_search_summary">Search filters are reset on each search. Turn off to save search filters</string>
@@ -286,21 +286,21 @@
     <string name="pref_install_auto_summary">Apps are installed instantly after download completes</string>
     <string name="pref_install_auto_title">Auto install APKs post-download</string>
     <string name="pref_install_delete_summary">On devices running Android Pie + with root install method, APKs get deleted by default</string>
-    <string name="pref_install_delete_title">Delete apk post-install</string>
-    <string name="pref_install_type_summary">Use native installer to install packages, breaks bundled apk installations</string>
+    <string name="pref_install_delete_title">Delete APK post-install</string>
+    <string name="pref_install_type_summary">Use native installer to install packages, breaks bundled APK installations</string>
     <string name="pref_install_type_title">Enforce native installer</string>
     <string name="pref_install_mode_summary">Select mode of APK installation</string>
     <string name="pref_install_mode_title">Installation method</string>
-    <string name="pref_install_profile_summary">Select the target profile to install apps, works only with root install method</string>
+    <string name="pref_install_profile_summary">Select the target profile to install apps to, works only with the root install method</string>
     <string name="pref_install_profile_title">Installation profiles (Experimental)</string>
     <string name="pref_install_mode_native">Native</string>
     <string name="pref_install_mode_root">Root</string>
     <string name="pref_install_mode_services">Aurora Services</string>
     <string name="pref_install_mode_no_root">Root access not available, make sure your device is rooted</string>
-    <string name="pref_install_mode_no_services">Aurora Services not installed, kindly install services first</string>
-    <string name="pref_install_mode_offline_services">Aurora Services not connected, kindly make sure its enabled and you have correct version of app</string>
-    <string name="pref_install_mode_root_warn">Root install method requires the apk to be downloaded in app data, in order to install via adb shell, Android Pie +</string>
-    <string name="pref_install_mode_internal_warn">You have selected internal storage for downloads, kindly disable it to use Aurora Services</string>
+    <string name="pref_install_mode_no_services">Aurora Services not installed, please install it first</string>
+    <string name="pref_install_mode_offline_services">Aurora Services not connected, please make sure its enabled and you have correct version of app</string>
+    <string name="pref_install_mode_root_warn">Root install method requires the APK to be downloaded in app data, in order to install via adb shell, Android Pie +</string>
+    <string name="pref_install_mode_internal_warn">You have selected internal storage for downloads, please disable it to use Aurora Services</string>
     <string name="pref_locale_custom_title">Custom langage</string>
     <string name="pref_locale_custom_summary">Enforce custom app language</string>
     <string name="pref_locale_list_title">Select locale</string>
@@ -321,9 +321,9 @@
     <string name="pref_proxy_type">Proxy type</string>
     <string name="pref_requested_language">Change default API request language</string>
     <string name="pref_requested_language_default">Your default language</string>
-    <string name="pref_requested_location_disable">You need to manually disable MockLocation from Developer Options to disable it completely.</string>
-    <string name="pref_requested_location_enable">You need to manually enable MockLocation from Developer Options.</string>
-    <string name="pref_requested_location_summary">Aurora Store must be set as default Mock Location Application</string>
+    <string name="pref_requested_location_disable">You need to manually disable Mock Location from the Developer Options to disable it completely.</string>
+    <string name="pref_requested_location_enable">You need to manually enable Mock Location from the Developer Options.</string>
+    <string name="pref_requested_location_summary">Aurora Store must be set as the default Mock Location Application</string>
     <string name="pref_ui_card_summary">Use legacy style cards for featured apps</string>
     <string name="pref_ui_card_title">Legacy style app cards</string>
     <string name="pref_ui_snap_summary">Show only one app on scroll</string>
@@ -351,8 +351,8 @@
     <string name="pref_updates_extended">Extended updates</string>
     <string name="pref_updates_extended_desc">Enable to check updates for disabled apps</string>
     <string name="pref_services_title">Aurora Services</string>
-    <string name="pref_services_desc">Launch Aurora services</string>
-    <string name="pref_services_desc_alt">Aurora services unavailable</string>
+    <string name="pref_services_desc">Launch Aurora Services</string>
+    <string name="pref_services_desc_alt">Aurora Services unavailable</string>
     <string name="pref_custom_tokenizer">Enable custom tokenizer</string>
     <string name="pref_custom_tokenizer_url">Tokenizer URL</string>
     <string name="pref_caching_strategy">Image caching strategy</string>
@@ -360,7 +360,7 @@
     <string name="pref_caching_strategy_automatic">Automatic</string>
     <string name="pref_caching_strategy_none">None</string>
     <string name="pref_clean_junk">Force clear junk files</string>
-    <string name="pref_clean_junk_desc">Removes all downloaded files from default directory</string>
+    <string name="pref_clean_junk_desc">Removes all downloaded files from the default directory</string>
     <string name="pref_abandon_session">Force clear installation sessions</string>
     <string name="pref_abandon_session_desc">Abandon all old pending installation sessions</string>
 
@@ -387,26 +387,26 @@
     <string name="tab_games">Find games</string>
     <string name="tab_family">Kids &amp; family</string>
 
-    <string name="toast_apk_blacklisted">Blacklisted</string>
-    <string name="toast_apk_whitelisted">Whitelisted</string>
-    <string name="toast_apk_copy_success">APK copied successfully</string>
-    <string name="toast_apk_copy_failure">Failed to copy APK</string>
+    <string name="toast_APK_blacklisted">Blacklisted</string>
+    <string name="toast_APK_whitelisted">Whitelisted</string>
+    <string name="toast_APK_copy_success">APK copied successfully</string>
+    <string name="toast_APK_copy_failure">Failed to copy APK</string>
     <string name="toast_loading_apps">Loading more apps..</string>
     <string name="toast_unknown_reason">Something went wrong, try again</string>
     <string name="toast_junk_removed">Junk files removed</string>
     <string name="toast_abandon_sessions">Old installation sessions abandoned</string>
 
     <string name="dialog_2FA_title">2-Factor Authentication</string>
-    <string name="dialog_2FA_desc">You seem to have enabled 2FA, kindly generate an app password and use the new generated password to login</string>
+    <string name="dialog_2FA_desc">You seem to have enabled 2FA, please generate an app password and use the new generated password to login</string>
     <string name="dialog_2FA_positive">Create password</string>
 
     <string name="dialog_purchase_title">App Purchase</string>
-    <string name="dialog_purchase_desc">You need to purchase this app first, Aurora Store currently does not support in app-purchases, you will be redirected to web page for the purchase.</string>
+    <string name="dialog_purchase_desc">You need to purchase this app first. Aurora Store currently does not support in app-purchases, you will be redirected to web page for the purchase.</string>
     <string name="dialog_purchase_positive">Buy now</string>
 
     <string name="dialog_geores_title">Geo restricted app</string>
-    <string name="dialog_geores_desc">The app you are trying to download is unavailable in your country, try spoofing your region from settings to download.</string>
+    <string name="dialog_geores_desc">The app you are trying to download is unavailable in your country, try spoofing your region from within the settings and try again.</string>
 
     <string name="dialog_incompat_title">Incompatible app</string>
-    <string name="dialog_incompat_desc">The app you are trying to download is incompatible with your device, try spoofing your device from settings to download.</string>
+    <string name="dialog_incompat_desc">The app you are trying to download is incompatible with your device, try spoofing your device information within the settings and try again.</string>
 </resources>
