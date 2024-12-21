@@ -112,7 +112,7 @@ class SplashFragment : BaseFragment<FragmentSplashBinding>() {
         binding.btnAnonymous.isVisible = !viewModel.authProvider.dispenserURL.isNullOrBlank()
 
         viewLifecycleOwner.lifecycleScope.launch {
-            viewModel.authState.collectLatest {
+            viewModel.authProvider.authState.collectLatest {
                 when (it) {
                     AuthState.Init -> updateStatus(getString(R.string.session_init))
 
@@ -193,14 +193,16 @@ class SplashFragment : BaseFragment<FragmentSplashBinding>() {
 
     private fun attachActions() {
         binding.btnAnonymous.addOnClickListener {
-            if (viewModel.authState.value != AuthState.Fetching) {
+            if (viewModel.authProvider.authState.value != AuthState.Fetching) {
                 binding.btnAnonymous.updateProgress(true)
-                viewModel.buildAnonymousAuthData()
+                lifecycleScope.launch {
+                    viewModel.authProvider.buildAnonymousAuthData()
+                }
             }
         }
 
         binding.btnGoogle.addOnClickListener {
-            if (viewModel.authState.value != AuthState.Fetching) {
+            if (viewModel.authProvider.authState.value != AuthState.Fetching) {
                 binding.btnGoogle.updateProgress(true)
                 if (isMAndAbove && PackageUtil.hasSupportedMicroG(requireContext())) {
                     val accounts = fetchGoogleAccounts()
@@ -288,11 +290,13 @@ class SplashFragment : BaseFragment<FragmentSplashBinding>() {
                     ),
                     requireActivity(),
                     {
-                        viewModel.buildGoogleAuthData(
-                            accountName,
-                            it.result.getString(AccountManager.KEY_AUTHTOKEN) ?: "",
-                            AuthHelper.Token.AUTH
-                        )
+                       lifecycleScope.launch {
+                           viewModel.authProvider.buildGoogleAuthData(
+                               accountName,
+                               it.result.getString(AccountManager.KEY_AUTHTOKEN) ?: "",
+                               AuthHelper.Token.AUTH
+                           )
+                       }
                     },
                     Handler(Looper.getMainLooper())
                 )
