@@ -17,6 +17,7 @@ import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.layout.requiredSize
 import androidx.compose.foundation.layout.wrapContentWidth
+import androidx.compose.foundation.lazy.LazyRow
 import androidx.compose.foundation.rememberScrollState
 import androidx.compose.foundation.shape.CircleShape
 import androidx.compose.foundation.shape.RoundedCornerShape
@@ -48,6 +49,9 @@ import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import androidx.compose.ui.util.fastForEach
 import androidx.fragment.app.DialogFragment
+import androidx.fragment.app.activityViewModels
+import androidx.lifecycle.compose.collectAsStateWithLifecycle
+import androidx.lifecycle.lifecycleScope
 import androidx.navigation.fragment.findNavController
 import coil3.compose.AsyncImage
 import coil3.request.ImageRequest
@@ -64,11 +68,11 @@ import com.aurora.store.util.Preferences
 import com.aurora.store.view.theme.AuroraTheme
 import com.google.android.material.dialog.MaterialAlertDialogBuilder
 import dagger.hilt.android.AndroidEntryPoint
+import kotlinx.coroutines.launch
 import javax.inject.Inject
 
 @AndroidEntryPoint
 class MoreDialogFragment : DialogFragment() {
-
     @Inject
     lateinit var authProvider: AuthProvider
 
@@ -80,7 +84,7 @@ class MoreDialogFragment : DialogFragment() {
     private data class Option(
         @StringRes val title: Int,
         @DrawableRes val icon: Int,
-        @IdRes val destinationID: Int
+        @IdRes val destinationID: Int,
     )
 
     override fun onCreateDialog(savedInstanceState: Bundle?): Dialog {
@@ -283,24 +287,66 @@ class MoreDialogFragment : DialogFragment() {
                         maxLines = 1,
                         overflow = TextOverflow.Ellipsis
                     )
+
+                    val authState by authProvider.authState.collectAsStateWithLifecycle()
+
+                    Text(
+                        text = "Session: $authState",
+                        fontWeight = FontWeight.Light,
+                        color = onBackgroundColor,
+                        fontSize = 14.sp,
+                        maxLines = 1,
+                        overflow = TextOverflow.Ellipsis
+                    )
                 }
             }
-            OutlinedButton(
-                onClick = { findNavController().navigate(R.id.accountFragment) },
-                shape = RoundedCornerShape(12.dp),
-                border = BorderStroke(
-                    1.dp,
-                    Color(requireContext().getStyledAttributeColor(androidx.appcompat.R.attr.colorControlHighlight))
-                ),
-                modifier = Modifier.fillMaxWidth()
+            LazyRow(
+                modifier = Modifier
+                    .fillMaxWidth(),
+                verticalAlignment = Alignment.CenterVertically,
+                horizontalArrangement = Arrangement.spacedBy(5.dp, Alignment.Start)
             ) {
-                Text(
-                    text = stringResource(id = R.string.manage_account),
-                    color = onBackgroundColor,
-                    fontWeight = FontWeight.Normal,
-                    maxLines = 1,
-                    overflow = TextOverflow.Ellipsis,
-                )
+                item {
+                    OutlinedButton(
+                        onClick = { findNavController().navigate(R.id.accountFragment) },
+                        shape = RoundedCornerShape(12.dp),
+                        border = BorderStroke(
+                            1.dp,
+                            Color(requireContext().getStyledAttributeColor(androidx.appcompat.R.attr.colorControlHighlight))
+                        ),
+                    ) {
+                        Text(
+                            text = stringResource(id = R.string.manage_account),
+                            color = onBackgroundColor,
+                            fontWeight = FontWeight.Normal,
+                            maxLines = 1,
+                            overflow = TextOverflow.Ellipsis,
+                        )
+                    }
+                }
+
+                item {
+                    OutlinedButton(
+                        onClick = {
+                            lifecycleScope.launch {
+                                authProvider.updateAuthState()
+                            }
+                        },
+                        shape = RoundedCornerShape(12.dp),
+                        border = BorderStroke(
+                            1.dp,
+                            Color(requireContext().getStyledAttributeColor(androidx.appcompat.R.attr.colorControlHighlight))
+                        ),
+                    ) {
+                        Text(
+                            text = "Refresh session",
+                            color = onBackgroundColor,
+                            fontWeight = FontWeight.Normal,
+                            maxLines = 1,
+                            overflow = TextOverflow.Ellipsis,
+                        )
+                    }
+                }
             }
         }
     }
@@ -309,7 +355,7 @@ class MoreDialogFragment : DialogFragment() {
     private fun OptionItem(
         option: Option,
         tintColor: Color = Color.Blue,
-        textColor: Color = Color.Black
+        textColor: Color = Color.Black,
     ) {
         Row(
             modifier = Modifier
@@ -340,7 +386,7 @@ class MoreDialogFragment : DialogFragment() {
 
     @Composable
     fun ThreeStateIconButton(
-        tint: Color = Color.White
+        tint: Color = Color.White,
     ) {
         var currentState by remember {
             mutableStateOf(

@@ -92,7 +92,9 @@ class GoogleFragment : BaseFragment<FragmentGoogleBinding>() {
                             val oauthToken = cookieMap[AUTH_TOKEN]
                             evaluateJavascript(JS_SCRIPT) {
                                 val email = it.replace("\"".toRegex(), "")
-                                viewModel.buildAuthData(view.context, email, oauthToken)
+                                lifecycleScope.launch {
+                                    viewModel.authProvider.buildAuthData(view.context, email, oauthToken)
+                                }
                             }
                         }
                     }
@@ -114,11 +116,11 @@ class GoogleFragment : BaseFragment<FragmentGoogleBinding>() {
         }
     }
 
-    private fun onEventReceived(event: AuthEvent) {
+    private suspend fun onEventReceived(event: AuthEvent) {
         when (event) {
             is AuthEvent.GoogleLogin -> {
                 if (event.success) {
-                    viewModel.buildGoogleAuthData(event.email, event.token, AuthHelper.Token.AAS)
+                    viewModel.authProvider.buildGoogleAuthData(event.email, event.token, AuthHelper.Token.AAS)
                 } else {
                     Toast.makeText(
                         requireContext(),
